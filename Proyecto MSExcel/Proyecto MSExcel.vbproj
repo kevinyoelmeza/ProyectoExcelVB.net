@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8B501B9-0E4B-4704-8F5E-667BF311481A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Proyecto_MSExcel.My.MyApplication</StartupObject>
+    <RootNamespace>Proyecto_MSExcel</RootNamespace>
+    <AssemblyName>Proyecto MSExcel</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Proyecto MSExcel.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Proyecto MSExcel.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoExcel1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1. Presentacion\Presentacion.Designer.vb">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Presentacion\Presentacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2. Inicio\Bienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2. Inicio\Bienvenida.Designer.vb">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4. Fomulario Principal\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4. Fomulario Principal\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5. Clases del Proyecto\TabsControlsCustom.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="1. Presentacion\Presentacion.resx">
+      <DependentUpon>Presentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Inicio\Bienvenida.resx">
+      <DependentUpon>Bienvenida.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. Fomulario Principal\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="3. Plantillas Excel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo Excel.ico" />
+    <Content Include="LogoExcel.ico" />
+    <Content Include="LogoExcel1.ico" />
+    <None Include="Resources\zoom.png" />
+    <None Include="Resources\LogoExcel.png" />
+    <None Include="Resources\LogoExcel1.png" />
+    <None Include="Resources\disquete.png" />
+    <None Include="Resources\disquete%281%29.png" />
+    <None Include="Resources\LogoExcelEsquina.png" />
+    <None Include="Resources\LogoGuardarEsquina.png" />
+    <None Include="Resources\boton-abrir-archivo.bmp" />
+    <None Include="Resources\LogoImpresoraEsquina.png" />
+    <None Include="Resources\pegar.png" />
+    <None Include="Resources\Copiar.png" />
+    <None Include="Resources\cortar.png" />
+    <None Include="Resources\AlineacionIzquierda.png" />
+    <None Include="Resources\AlineacionCentrado.png" />
+    <None Include="Resources\AlineacionDerecha.png" />
+    <None Include="Resources\insertar.png" />
+    <None Include="Resources\EliminarFila.png" />
+    <None Include="Resources\imagen.png" />
+    <None Include="Resources\FormasGeometrico.png" />
+    <None Include="Resources\formas.png" />
+    <None Include="Resources\filtrar.png" />
+    <Content Include="Resources\PlantillaBasica.PNG" />
+    <Content Include="Resources\PlantillaBasica2.PNG" />
+    <None Include="Resources\BotonAbrir.png" />
+    <None Include="Resources\boton-abrir-archivo1.png" />
+    <Content Include="Resources\LogoExcel.ico" />
+    <None Include="Resources\LogoOffice.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
